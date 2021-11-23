@@ -1,0 +1,44 @@
+### Create a new user
+POST http://localhost:4000/auth/signup
+Content-Type: application/json
+
+{
+  "email": "test@test.com",
+  "password": "password"
+}
+
+### Signin a user
+POST http://localhost:4000/auth/signin
+Content-Type: application/json
+
+{
+  "email": "test4@test.com",
+  "password": "password"
+}
+
+### Get signed in user
+GET http://localhost:4000/auth/whoami
+
+### Signout
+POST http://localhost:4000/auth/signout
+
+### Find a user with a given ID
+
+GET http://localhost:4000/auth/2
+
+### Find all users with a given email
+
+GET http://localhost:4000/auth?email=test@test.com
+
+### Delete user with given id
+
+DELETE http://localhost:4000/auth/1
+
+### Update user with given id
+
+Patch http://localhost:4000/auth/2
+Content-Type: application/json
+
+{
+  "email": "test@test.com"
+}
