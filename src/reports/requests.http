@@ -13,9 +13,12 @@ Content-Type: application/json
 
 
 ### PATH
-Patch http://localhost:4000/reports/1
+Patch http://localhost:4000/reports/6
 Content-Type: application/json
 
 {
   "approved": false
 }
+
+### Get and estimate for an existing vehicle
+GET http://localhost:4000/reports?make=toyota&model=corrola&lng=0&lat=0&mileage=20000&year=1980
